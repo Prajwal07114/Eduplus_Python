@@ -1,5 +1,5 @@
 # 1.
-students_marks = {"prajwal": 89, "jay": 2, "vijay": 56, "sanjay": 45, "yash": 34}
+students_marks = {"prajwal": 89, "rohit": 2, "vijay": 56, "sanjay": 45, "yash": 34}
 print(students_marks)
 
 # 2.
@@ -31,21 +31,21 @@ for student_name, marks in students_marks.items():
 print("Is prajwal in dictionary:", "prajwal" in students_marks)
 
 # 10.
-print("Is 90 in dictionary values:", 90 in students_marks.values())
+print("Is 46 in dictionary values:", 46 in students_marks.values())
 
 # 11.
 print("Marks of vijay using get():", students_marks.get("vijay"))
 
 # 12.
 employees_department = {
-    "ajay": "HR",
-    "vijay": "Finance",
-    "sanjay": "IT",
-    "yash": "IT"
+    "salmaan": "HR",
+    "SRK": "Finance",
+    "sanju": "cricket",
+    "prajwal": "entc"
 }
 
 # 13.
-print("Dept of yash is:", employees_department["yash"])
+print("Dept of sanju is:", employees_department["sanju"])
 
 # 14.
 employees_department["ram"] = "Marketing"
@@ -56,7 +56,7 @@ employees_department["ram"] = "Sales"
 print(employees_department)
 
 # 16.
-del employees_department["vijay"]
+del employees_department["SRK"]
 print(employees_department)
 
 # 17. Sort employees by name (ascending)
@@ -72,8 +72,8 @@ print(dict(sorted(employees_department.items(), key=lambda x: x[0], reverse=True
 print(dict(sorted(employees_department.items(), key=lambda x: x[1], reverse=True)))
 
 # 21.
-print("Employees in IT dept:",
-      [name for name, dept in employees_department.items() if dept == "IT"])
+print("Employees in cricket dept:",
+      [name for name, dept in employees_department.items() if dept == "cricket"])
 
 # 22.
 count_above_80 = 0
@@ -84,18 +84,18 @@ print("Number of students scored above 80:", count_above_80)
 
 # 23.
 nested_student_details = {
-    "ajay": {"age": 20, "grade": "A", "department": "IT"},
-    "vijay": {"age": 21, "grade": "B", "department": "ENTC"},
-    "sanjay": {"age": 22, "grade": "C", "department": "MECH"}
+    "prajwal": {"age": 20, "grade": "A", "department": "IT"},
+    "yash": {"age": 21, "grade": "B", "department": "ENTC"},
+    "harshal": {"age": 22, "grade": "C", "department": "MECH"}
 }
 print(nested_student_details)
 
 # 24.
-print("Grade of ajay is:", nested_student_details["ajay"]["grade"])
+print("Grade of harshal is:", nested_student_details["harshal"]["grade"])
 
 # 25.
-nested_student_details["ajay"]["grade"] = "O"
-print("Updated grade of ajay:", nested_student_details["ajay"]["grade"])
+nested_student_details["yash"]["grade"] = "O"
+print("Updated grade of yash:", nested_student_details["yash"]["grade"])
 
 # 26.
 for student_name, details in nested_student_details.items():
@@ -112,7 +112,7 @@ print("After clearing additional_students:", additional_students)
 
 # 29.
 students_marks_copy = students_marks.copy()
-students_marks_copy["ajay"] = 95
+students_marks_copy["yash"] = 95
 print("Original Dictionary:", students_marks)
 print("Modified Copy:", students_marks_copy)
 
